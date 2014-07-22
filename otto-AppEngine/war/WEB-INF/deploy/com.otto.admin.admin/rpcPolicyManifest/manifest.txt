@@ -1,0 +1,2 @@
+# Module com.otto.admin.admin
+# RPC service class, partial path of RPC policy file

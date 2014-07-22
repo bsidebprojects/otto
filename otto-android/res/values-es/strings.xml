@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">otto</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="title_activity_driver">DriverActivity</string>
+    <string name="title_activity_parents">ParentsActivity</string>
+    <string name="title_activity_new_service">NewServiceActivity</string>
+    <string name="action_settings">Configuración</string>
+    <string name="new_service_title">Comenzar un nuevo Servicio</string>
+    <string name="select_service_title">Selecciona un Servicio a seguir</string>
+    <string name="select_fav_title">o Selecciona una ruta preferida</string>
+    <string name="start_service">Comenzar Servicio</string>
+    <string name="select_route">Elige una ruta</string>
+    <string name="no_route_selected">Elige una ruta</string>
+    <string name="insert_service_code">Introduce el código</string>
+    <string name="cancel_text">Cancelar</string>
+    <string name="delete_text">Eliminar</string>
+    <string name="start_text">Comenzar</string>
+    <string name="title_activity_parent_menu">ParentMenuActivity</string>
+    <string name="track_text">Seguir</string>
+    <string name="send_message_hint">Enviar mensaje</string>
+    <string name="send_text">Enviar</string>
+    <string name="route_ended_text">Ruta finalizada</string>
+    <string name="fields_empty_error">Por favor, rellena todos los campos</string>
+    <string name="message_on_route">Mensaje de la ruta</string>
+    <string name="in">en</string>
+    <string name="minutes">minutos</string>
+    <string name="insert_message">Inserta Mensaje</string>
+    <string name="no_service_active_error">No se ha encontrado este servicio</string>
+
+</resources>

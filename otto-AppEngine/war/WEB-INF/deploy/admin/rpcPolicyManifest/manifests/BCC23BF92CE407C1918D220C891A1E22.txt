@@ -1,0 +1,2 @@
+serviceClass: com.otto.admin.client.AdminService
+path: 60FF2143E1222ACD644B2B60ECCAA6AC.gwt.rpc

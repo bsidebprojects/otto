@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <ImageButton
+        android:id="@+id/driver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/driver_button" 
+        android:layout_weight="1"  />
+    <ImageButton
+        android:id="@+id/parents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/parents_button"
+        android:layout_weight="1"  />
+    
+    <!-- 
+    <Button
+        android:id="@+id/driver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Driver" />
+
+    <Button
+        android:id="@+id/parents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Parents" />
+     -->
+
+</LinearLayout>

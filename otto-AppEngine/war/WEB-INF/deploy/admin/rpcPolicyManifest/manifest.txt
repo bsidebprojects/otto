@@ -1,0 +1,3 @@
+# Module admin
+# RPC service class, partial path of RPC policy file
+com.otto.admin.client.AdminService, 60FF2143E1222ACD644B2B60ECCAA6AC.gwt.rpc

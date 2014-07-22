@@ -1,0 +1,305 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://ottoextremeandroid.appspot.com/_ah/api",
+  "name" : "serviceendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://ottoextremeandroid.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "otto.com",
+  "ownerName" : "otto.com",
+  "methods" : {
+    "serviceendpoint.addMessage" : {
+      "path" : "addMessage",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.addMessage",
+      "request" : {
+        "parameters" : {
+          "code" : {
+            "type" : "string",
+            "required" : true
+          },
+          "message" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "serviceendpoint.updateService" : {
+      "path" : "service",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.updateService",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "serviceendpoint.getServiceByCode" : {
+      "path" : "serviceByCode",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.getServiceByCode",
+      "request" : {
+        "parameters" : {
+          "code" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "serviceendpoint.insertService" : {
+      "path" : "service",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.insertService",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "serviceendpoint.removeService" : {
+      "path" : "service/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.removeService",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "serviceendpoint.getService" : {
+      "path" : "service/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.getService",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "serviceendpoint.addTrack" : {
+      "path" : "addTrack",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.addTrack",
+      "request" : {
+        "parameters" : {
+          "code" : {
+            "type" : "string",
+            "required" : true
+          },
+          "track" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "serviceendpoint.listService" : {
+      "path" : "service",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.otto.ServiceEndpoint.listService",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Service" : {
+        "id" : "Service",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "securityCode" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "routeId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "routeName" : {
+            "type" : "string"
+          },
+          "start" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "end" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "track" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "messages" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "CollectionResponse_Service" : {
+        "id" : "CollectionResponse_Service",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Service"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.otto.ServiceEndpoint.addMessage" : {
+        "response" : {
+          "$ref" : "Service"
+        }
+      },
+      "com.otto.ServiceEndpoint.updateService" : {
+        "request" : {
+          "$ref" : "Service"
+        },
+        "response" : {
+          "$ref" : "Service"
+        }
+      },
+      "com.otto.ServiceEndpoint.getServiceByCode" : {
+        "response" : {
+          "$ref" : "Service"
+        }
+      },
+      "com.otto.ServiceEndpoint.insertService" : {
+        "request" : {
+          "$ref" : "Service"
+        },
+        "response" : {
+          "$ref" : "Service"
+        }
+      },
+      "com.otto.ServiceEndpoint.removeService" : {
+      },
+      "com.otto.ServiceEndpoint.getService" : {
+        "response" : {
+          "$ref" : "Service"
+        }
+      },
+      "com.otto.ServiceEndpoint.addTrack" : {
+        "response" : {
+          "$ref" : "Service"
+        }
+      },
+      "com.otto.ServiceEndpoint.listService" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Service"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,303 @@
+{
+ "kind": "discovery#restDescription",
+ "etag": "\"MKGA2miAJpVGF7yQTQhsoDXpye8/50KLGdauNCPYW_LLIoW_gE6BRtA\"",
+ "discoveryVersion": "v1",
+ "id": "serviceendpoint:v1",
+ "name": "serviceendpoint",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "otto.com",
+ "ownerName": "otto.com",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rest",
+ "baseUrl": "https://ottoextremeandroid.appspot.com/_ah/api/serviceendpoint/v1/",
+ "basePath": "/_ah/api/serviceendpoint/v1/",
+ "rootUrl": "https://ottoextremeandroid.appspot.com/_ah/api/",
+ "servicePath": "serviceendpoint/v1/",
+ "batchPath": "batch",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CollectionResponse_Service": {
+   "id": "CollectionResponse_Service",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Service"
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Service": {
+   "id": "Service",
+   "type": "object",
+   "properties": {
+    "end": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "messages": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "routeId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "routeName": {
+     "type": "string"
+    },
+    "securityCode": {
+     "type": "string",
+     "format": "int64"
+    },
+    "start": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "track": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "addMessage": {
+   "id": "serviceendpoint.addMessage",
+   "path": "addMessage",
+   "httpMethod": "POST",
+   "parameters": {
+    "code": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    },
+    "message": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "code",
+    "message"
+   ],
+   "response": {
+    "$ref": "Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "addTrack": {
+   "id": "serviceendpoint.addTrack",
+   "path": "addTrack",
+   "httpMethod": "POST",
+   "parameters": {
+    "code": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    },
+    "track": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "code",
+    "track"
+   ],
+   "response": {
+    "$ref": "Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getService": {
+   "id": "serviceendpoint.getService",
+   "path": "service/{id}",
+   "httpMethod": "GET",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "response": {
+    "$ref": "Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getServiceByCode": {
+   "id": "serviceendpoint.getServiceByCode",
+   "path": "serviceByCode",
+   "httpMethod": "GET",
+   "parameters": {
+    "code": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "code"
+   ],
+   "response": {
+    "$ref": "Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertService": {
+   "id": "serviceendpoint.insertService",
+   "path": "service",
+   "httpMethod": "POST",
+   "request": {
+    "$ref": "Service",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "listService": {
+   "id": "serviceendpoint.listService",
+   "path": "service",
+   "httpMethod": "GET",
+   "parameters": {
+    "cursor": {
+     "type": "string",
+     "location": "query"
+    },
+    "limit": {
+     "type": "integer",
+     "format": "int32",
+     "location": "query"
+    }
+   },
+   "response": {
+    "$ref": "CollectionResponse_Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "removeService": {
+   "id": "serviceendpoint.removeService",
+   "path": "service/{id}",
+   "httpMethod": "DELETE",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateService": {
+   "id": "serviceendpoint.updateService",
+   "path": "service",
+   "httpMethod": "PUT",
+   "request": {
+    "$ref": "Service",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "Service"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}
